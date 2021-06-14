@@ -94,19 +94,38 @@ class Linked_List:
                 current = current.next
 
 
+    def kthFromEnd(self, k):
+        current = self.head
+        count = 0
+    
+        while current.next:
+            current = current.next
+            count += 1
 
+        if k > count:
+            return False
 
-if __name__ == "__main__":
- ll=Linked_List()
- ll.insert("Hamza")
- ll.insert("Akram")
- ll.append(4)
- ll.append('ahmad')
-# #  ll.append('s')
-# #  print(ll.head.value)
-# #  print(ll.head.next.value)
-# #  print(ll.head.next.next.value)
-#  print(ll.__str__())
-# #  print (ll.include('Hamza'))
-# #  print (ll.include('akram'))
- print(ll.printList())
+        if k > count:
+            raise Exception("Sorry, the value is larger than the linked list")
+      
+
+        current = self.head
+        for i in range(count - k):
+            current = current.next
+        print(current.value)
+        return current.value
+
+# if __name__ == "__main__":
+#  ll=Linked_List()
+# #  ll.insert("Hamza")
+# #  ll.insert("Akram")
+# #  ll.append(4)
+# #  ll.append('ahmad')
+# # #  ll.append('s')
+# # #  print(ll.head.value)
+# # #  print(ll.head.next.value)
+# # #  print(ll.head.next.next.value)
+# #  print(ll.__str__())
+# # #  print (ll.include('Hamza'))
+# # #  print (ll.include('akram'))
+# print(ll.printList())
