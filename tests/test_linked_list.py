@@ -4,6 +4,7 @@ from data_structures_and_algorithms_python.data_structures.linked_list import No
 
 
 
+
 def test_instance():
     ll = Linked_List()
     assert isinstance(ll, Linked_List) 
@@ -12,6 +13,7 @@ def test_LinkedList_include():
     test_LinkedList = Linked_List()
     test_LinkedList.insert(0)
     test_LinkedList.insert(1)
+    test_LinkedList.insert(4)
     assert test_LinkedList.include(1) == True
     assert test_LinkedList.include(88) == False   
 
@@ -34,23 +36,34 @@ def test__str__():
     assert test_LinkedList.__str__() == "H -> A -> M -> Z -> A -> H -> Null"
 
 
+def test_insert_before(llFixture):
+    llFixture.insertBefore(2,10)
+    assert llFixture.__str__() == '7 -> 3 -> 10 -> 2 -> 5 -> Null'
 
+
+
+def test_insert_after(llFixture):
+    llFixture.insertAfter(3,12)     
+    assert llFixture.__str__() == "7 -> 3 -> 12 -> 2 -> 5 -> Null"
+
+
+def test_kthFromEnd(llFixture):
+    actual_output1 =llFixture.kthFromEnd(3)
+    actual_output2=llFixture.kthFromEnd(0)
+    actual_output3 =llFixture.kthFromEnd(10)
+    print (actual_output1,actual_output2,actual_output3 ,'hiiiiiii')
+    expected_output1 = 7
+    expected_output2 = 5
+    expected_output3 = False
+    assert actual_output1 == expected_output1
+    assert actual_output2 == expected_output2
+    assert actual_output3 == expected_output3
 
 @pytest.fixture
-def linked_list_ob():
-    linked_list_o=Linkedlist()
-    linked_list_o.insert(1)
+def llFixture():
+    linked_list_o=Linked_List()
+    linked_list_o.insert(5) 
     linked_list_o.insert(2)
     linked_list_o.insert(3)
-    linked_list_o.insert(0)
+    linked_list_o.insert(7)
     return linked_list_o
-
-@pytest.fixture
-def linked_list_ob2():
-    linked_list_o2=Linkedlist()
-    linked_list_o2.insert(0)
-    linked_list_o2.insert(3)
-    linked_list_o2.insert(2)
-    linked_list_o2.insert(1)
-    return linked_list_o2
-
