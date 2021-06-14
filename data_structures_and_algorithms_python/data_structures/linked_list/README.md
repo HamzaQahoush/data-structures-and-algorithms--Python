@@ -60,3 +60,11 @@ insert method before or after specfic value.
 ### append :
 
 ![](https://i.ibb.co/Yck7FGx/code-challenges.jpg)
+
+### insert after :
+
+![](https://i.ibb.co/xGD3Pq2/code-challenges-1.jpg)
+
+insert before :
+
+![](https://i.ibb.co/mv1yWDK/code-challenges-2.jpg)
