@@ -50,8 +50,14 @@ insert method before or after specfic value.
 - [x] insert before specfic value
 - [x] insert after specfic value
 - [x] test if a value included.
+- [x] zip 2 lists
+- [x] get the value from the end of linked list given index from the end of liked list
 
 ### White Boarding
+
+### Zip List
+
+![](https://i.ibb.co/p4CYJBT/code-challenges-4.jpg)
 
 ### ll-kth-from-end
 

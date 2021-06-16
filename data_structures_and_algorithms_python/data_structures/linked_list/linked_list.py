@@ -107,15 +107,37 @@ class Linked_List:
 
         if k > count:
             raise Exception("Sorry, the value is larger than the linked list")
-      
+
 
         current = self.head
         for i in range(count - k):
             current = current.next
         print(current.value)
         return current.value
+        
 
-# if __name__ == "__main__":
+
+
+
+
+
+
+if __name__ == "__main__":
+    l_list = Linked_List()
+    l_list.insert(3)
+    l_list.insert(2)
+    l_list.insert(1)
+    l_list.insert(5)
+
+    l_list2 = Linked_List()
+    l_list2.insert(4)
+    l_list2.insert(1)
+    l_list2.insert(2)
+    l_list2.insert(3)
+    print(l_list.__str__())
+    print(l_list2.__str__())
+    print(Linked_List.zipLists(l_list,l_list2).__str__())
+
 #  ll=Linked_List()
 # #  ll.insert("Hamza")
 # #  ll.insert("Akram")
@@ -128,4 +150,5 @@ class Linked_List:
 # #  print(ll.__str__())
 # # #  print (ll.include('Hamza'))
 # # #  print (ll.include('akram'))
-# print(ll.printList())
+# print(l_list.printList())
+# print(l_list2.printList())
