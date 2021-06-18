@@ -2,9 +2,10 @@ class Node:
     def __init__(self,value=None):
         self.value = value
         self.next = None
-class EmptyStackException:
+class EmptyStackException(Exception):
     pass
-class  EmptyQueueException: 
+
+class EmptyQueueException(Exception):
     pass
 
 class Stack:
@@ -20,7 +21,8 @@ class Stack:
             self.top=new_node
 
     def pop (self):
-        if not self.top : return "The stack is empty "
+        if not self.top :
+            return "The stack is empty "
         else : 
             temp=self.top
             self.top=self.top.next
@@ -73,7 +75,7 @@ class Queue:
         return self.front == None
     def dequeue (self): 
         if not self.front :
-            raise EmptyQueueException(" Cannot dequeue from empty Queue")
+            raise EmptyQueueException()
         else:
             temp = self.front
             self.front=self.front.next
@@ -94,28 +96,23 @@ class Queue:
 
 
 
-if __name__ == "__main__" :
-    # stack= Stack() 
-    # # print (stack ,)
-    # stack.push(5)
-    # # print(stack ,)
-    # stack.push(4,)
-    # print(stack,)
-    # stack.pop()
-    # print(stack, )
-    # print(stack.peek())
-    queue=Queue()
-   
-    # print (queue , "empty")
-    queue.enqueue('Hamza')
-    # print (queue)
-    queue.enqueue('Moh')
-    queue.enqueue('saed')
-    # queue.dequeue()
-    # print (queue)
-    print(queue.peek())
-  
+# if __name__ == "__main__" :
+    # # stack= Stack() 
+    # # # print (stack ,)
+    # # stack.push(5)
+    # # # print(stack ,)
+    # # stack.push(4,)
+    # # print(stack,)
+    # # stack.pop()
+    # # print(stack, )
+    # # print(stack.peek())
+    # queue=Queue()
 
-
-
-
+    # # print (queue , "empty")
+    # queue.enqueue('Hamza')
+    # # print (queue)
+    # queue.enqueue('Moh')
+    # queue.enqueue('saed')
+    # # queue.dequeue()
+    # # print (queue)
+    # print(queue.peek())
