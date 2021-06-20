@@ -31,3 +31,6 @@ after that we need to retrieve the new stack after popping/dequeuing ,
 create temporary value which take the stack2
 create new instance from it .
 popped it again pushed it to to stack 1
+
+
+[code link](https://github.com/HamzaQahoush/data-structures-and-algorithms--Python/blob/master/data_structures_and_algorithms_python/challenges/queue_with_stacks/queue_with_stacks.py)
