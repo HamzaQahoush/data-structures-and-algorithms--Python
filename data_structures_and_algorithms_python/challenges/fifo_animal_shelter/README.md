@@ -33,3 +33,6 @@ define method enqueue which take animal parameter we check for both cases if the
 
 define method dequeue which take "pref" as parameter and we check about it if cat or dog then enqueue it .
 else return Null.
+
+
+[Pull Request Link](https://github.com/HamzaQahoush/data-structures-and-algorithms--Python/blob/master/data_structures_and_algorithms_python/challenges/fifo_animal_shelter/fifo_animal_shelter.py)
