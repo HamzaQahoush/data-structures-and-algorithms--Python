@@ -53,3 +53,29 @@ Depth First Traversals:
 • contains : which check if a value exist in our tree.
 
 • add method : to add node in a tree using binary search Tree.
+
+# Code challenge 16
+
+# Challenge Summary
+
+#### Get max value : using previous methods get the max of the values in list.
+
+## White Boarding
+
+![](https://i.ibb.co/6Dd84Jg/code-challenges-11.jpg)
+
+## Approach & Efficiency:
+
+define tree \_max function which take self
+check if the root hasn't value and return empty value .
+inherit the list of any of previous methods.
+loop over it and get the max value and return it
+
+## Solution
+
+<!-- Show how to run your code, and examples of it in action -->
+
+my solution using on of methods of depth first travesals and put the values in list and retun the max value, after looping over the values .
+
+for example, for this tree the output is 11
+![](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-16/binary-tree.png)
