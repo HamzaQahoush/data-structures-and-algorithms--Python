@@ -1,4 +1,4 @@
-from data_structures_and_algorithms_python.Trees.trees import * 
+from data_structures_and_algorithms_python.data_structures.Trees.trees import * 
 import pytest 
 
 
