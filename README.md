@@ -12,4 +12,4 @@
 | code Challenge 12, First-in, First out Animal Shelter..| [link](https://bit.ly/3AeMWgG)  |
 | code Challenge 13, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
 | code Challenge 14, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
-| code Challenge 16 , 17 Binary Tree and BST Implementation , max | [link](https://bit.ly/2UNhvtH)  |
+| code Challenge 16 , 17 Binary Tree and BST Implementation , max | [link](https://bit.ly/3gZfzqr)  |
