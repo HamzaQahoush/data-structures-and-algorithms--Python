@@ -40,7 +40,7 @@ class BinaryTree (Tree_Node) :
                 traverse(root.right)    
 
         traverse (self.root)
-        return ( ", ".join( repr(e) for e in in_list ) )
+        return (in_list ) 
 
 
     def post_order(self, root):
@@ -51,7 +51,38 @@ class BinaryTree (Tree_Node) :
             res.append(root.value)
         
         return res 
+    def tree_max(self): 
+        max =0
+        if not self.root.value : 
+            return "No Max Value empty Tree"
+            
+        else:
+            
+            mylist = self.in_order()
+            for i in mylist : 
+                if i > max:  
+                    max= i
+        return max
 
+        # if self.root is None : 
+        #     return ('Empty Tree No max')
+        # def traverse(root):
+        #     print ('Hello')
+        #     if root: 
+        #         result= root.value
+        #         print(result)
+
+        #         left_result= traverse(root.left)  
+            
+        #         right_result= traverse(root.right) 
+        #         if left_result > result:
+        #             result=left_result
+        
+        #         elif right_result > result : 
+        #             result = right_result
+                
+        # traverse(self.root)        
+        
 
     
 class  Binary_Search (BinaryTree) : 
@@ -100,8 +131,6 @@ class  Binary_Search (BinaryTree) :
 
 
 
-
-
 if __name__ == "__main__":
     node1 = Tree_Node(1)
     node1.left = Tree_Node(2)
@@ -109,24 +138,24 @@ if __name__ == "__main__":
     node1.left.left = Tree_Node(4)
     node1.left.right = Tree_Node(5)
     binary_tree = BinaryTree(node1)
-    
+    print(binary_tree.tree_max())
     # print(bts.contains(2))
     # print(bts.contains(10))
 
   
     # print(binary_tree.pre_order())  #1, 2, 4, 5, 3 
     # print (binary_tree.in_order()) #4, 2, 5, 1, 3
-    print (binary_tree.post_order(node1)) #4, 5, 2, 3, 1
+    # print (binary_tree.post_order(node1)) #4, 5, 2, 3, 1
     
 
-    valueInsert = Binary_Search()
-    valueInsert.add(3)
-    valueInsert.add(6)
-    valueInsert.add(14)
-    valueInsert.add(15)
-    valueInsert.add(16)
-    valueInsert.add(17)
-    valueInsert
+    # valueInsert = Binary_Search()
+    # valueInsert.add(3)
+    # valueInsert.add(6)
+    # valueInsert.add(14)
+    # valueInsert.add(15)
+    # valueInsert.add(16)
+    # valueInsert.add(17)
+    # valueInsert
 
 
    

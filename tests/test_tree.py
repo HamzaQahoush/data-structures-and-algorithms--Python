@@ -18,7 +18,7 @@ def test_single_root_node ():
 # 3.Can successfully add a left child and right child to a single root node
 
 def test_add_left_and_right_child_to_single_root_node(): 
-    expected = '2, 1, 3'
+    expected =  [2, 1, 3]
     node1 = Tree_Node(1)
     node1.left = Tree_Node(2)
     node1.right = Tree_Node(3)
@@ -35,7 +35,7 @@ def test_return_a_collection_from_a_preorder_traversal(tree_test):
 
 # 4.Can successfully return a collection from a in_order traversal
 def test_return_a_collection_from_a_In_order_traversal(tree_test): 
-    expected = '4, 12, 5, 3, 1, 2, 6'
+    expected = [4, 12, 5, 3, 1, 2, 6]
     actual =tree_test.in_order()
     assert actual == expected   
 
@@ -56,7 +56,18 @@ def test_return_a_collection_from_a_post_order_traversal():
 
 
 
+#5. find a max in tree 
+def test_max_in_tree (tree_test) : 
+    expected = 12
+    actual =tree_test.tree_max()
+    assert actual == expected   
 
+def test_max_empty_in_tree () : 
+    node1= Tree_Node()
+    binary_tree = BinaryTree(node1)
+    expected = "No Max Value empty Tree"
+    actual =binary_tree.tree_max()
+    assert actual == expected   
 
 
 
