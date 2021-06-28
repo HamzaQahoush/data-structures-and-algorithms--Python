@@ -54,9 +54,11 @@ Depth First Traversals:
 
 • add method : to add node in a tree using binary search Tree.
 
+---
+
 # Code challenge 16
 
-# Challenge Summary
+## Challenge Summary
 
 #### Get max value : using previous methods get the max of the values in list.
 
@@ -79,3 +81,31 @@ my solution using on of methods of depth first travesals and put the values in l
 
 for example, for this tree the output is 11
 ![](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-16/binary-tree.png)
+
+---
+
+# Code challenge 17
+
+## Challenge Summary
+
+#### To implement Breadth first traversal iterates through the tree by going through each level of the tree node-by-node
+
+## White Boarding
+
+![](https://i.ibb.co/VYZcVx4/code-challenges-12.jpg)
+
+## Approach & Efficiency:
+
+I used the approach of creating two lists , one for storing the temporary values which will be poped and put it inside another list.
+I started by storing the the root , then loop over it while root exists , take the left element and insert it in queue list , same for the rigth node.then we will start poping the first index until the queue is empty and return the result which contains the popped values/
+
+## Solution
+
+<!-- Show how to run your code, and examples of it in action -->
+
+for this tree for example :
+we will start from the root , Following the approach I mentioned above :
+
+the result will be : [ 2 ,7 ,5 , 2 , 6 , 9 ,5 , 11 ,4]
+
+![](https://codefellows.github.io/common_curriculum/data_structures_and_algorithms/Code_401/class-17/binary-tree.png)

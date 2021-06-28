@@ -2,11 +2,6 @@ class Node:
     def __init__(self,value=None):
         self.value = value
         self.next = None
-class EmptyStackException(Exception):
-    pass
-
-class EmptyQueueException(Exception):
-    pass
 
 class Stack:
     def __init__(self,node=None):
@@ -47,6 +42,11 @@ class Stack:
         return f" -> ".join(items)
 
 
+class EmptyStackException(Exception):
+    pass
+
+class EmptyQueueException(Exception):
+    pass
 
 
 class Queue:
