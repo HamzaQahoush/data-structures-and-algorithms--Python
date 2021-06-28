@@ -1,11 +1,13 @@
+#-------------------------Tree implementation 1/2-- Code Challenge: Class 15 ----------------------        
 class Tree_Node : 
     def __init__(self , value=None): 
         self.value = value
         self.right= None
         self.left=None
+
     def __str__(self):
         return str(self.value)
-  
+
 
 class BinaryTree (Tree_Node) : 
     def __init__(self,root=None): 
@@ -51,6 +53,8 @@ class BinaryTree (Tree_Node) :
             res.append(root.value)
         
         return res 
+
+#------------------------- find max in tree -- Code Challenge: Class 16 ----------------------        
     def tree_max(self): 
         max =0
         if not self.root.value : 
@@ -63,28 +67,35 @@ class BinaryTree (Tree_Node) :
                 if i > max:  
                     max= i
         return max
+#-------------------------Breadth-first Traversal-- Code Challenge: Class 17 ----------------------        
 
-        # if self.root is None : 
-        #     return ('Empty Tree No max')
-        # def traverse(root):
-        #     print ('Hello')
-        #     if root: 
-        #         result= root.value
-        #         print(result)
 
-        #         left_result= traverse(root.left)  
+    def breadth_first(self): 
+        if self.root is None :
+            return
+
+        else :     
+            result=[]
+            queue = []    
+            queue+=[self.root]
+
+            while queue : 
+                currentNode = queue[0]
+                if currentNode.left: 
+                    queue+=[currentNode.left]
+                if currentNode.right: 
+                    queue+=[currentNode.right]
+
+                result += [queue.pop(0).value]
+
             
-        #         right_result= traverse(root.right) 
-        #         if left_result > result:
-        #             result=left_result
-        
-        #         elif right_result > result : 
-        #             result = right_result
-                
-        # traverse(self.root)        
-        
+        return result    
 
-    
+            
+
+#-------------------------Tree implementation 2/2-- Code Challenge: Class 15 ----------------------        
+
+
 class  Binary_Search (BinaryTree) : 
 
     def add(self,value) : 
@@ -128,7 +139,7 @@ class  Binary_Search (BinaryTree) :
         return traverse(self.root)
 
 
-
+#--------------------------------------------------------------------------------------
 
 
 if __name__ == "__main__":
@@ -138,11 +149,9 @@ if __name__ == "__main__":
     node1.left.left = Tree_Node(4)
     node1.left.right = Tree_Node(5)
     binary_tree = BinaryTree(node1)
-    print(binary_tree.tree_max())
-    # print(bts.contains(2))
-    # print(bts.contains(10))
+    # print(binary_tree.tree_max())
 
-  
+    print(binary_tree.breadth_first())
     # print(binary_tree.pre_order())  #1, 2, 4, 5, 3 
     # print (binary_tree.in_order()) #4, 2, 5, 1, 3
     # print (binary_tree.post_order(node1)) #4, 5, 2, 3, 1

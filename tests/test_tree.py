@@ -62,6 +62,7 @@ def test_max_in_tree (tree_test) :
     actual =tree_test.tree_max()
     assert actual == expected   
 
+# 6. max in empty tree
 def test_max_empty_in_tree () : 
     node1= Tree_Node()
     binary_tree = BinaryTree(node1)
@@ -69,7 +70,11 @@ def test_max_empty_in_tree () :
     actual =binary_tree.tree_max()
     assert actual == expected   
 
-
+# 7. breadth_first test 
+def test_breadth_first (tree_test): 
+    expected = [3, 12, 2, 4, 5, 1, 6]
+    actual = tree_test.breadth_first()
+    assert actual == expected
 
 @pytest.fixture
 def tree_test():
