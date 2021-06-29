@@ -70,14 +70,14 @@ class BinaryTree (Tree_Node) :
 #-------------------------Breadth-first Traversal-- Code Challenge: Class 17 ----------------------        
 
 
-    def breadth_first(self): 
-        if self.root is None :
+    def breadth_first(tree): 
+        if tree.root is None :
             return
 
         else :     
             result=[]
             queue = []    
-            queue+=[self.root]
+            queue+=[tree.root]
 
             while queue : 
                 currentNode = queue[0]
