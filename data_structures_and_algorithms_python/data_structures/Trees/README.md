@@ -54,8 +54,6 @@ Depth First Traversals:
 
 • add method : to add node in a tree using binary search Tree.
 
----
-
 # Code challenge 16
 
 ## Challenge Summary

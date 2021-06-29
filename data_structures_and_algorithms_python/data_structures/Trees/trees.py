@@ -12,7 +12,7 @@ class Tree_Node :
 class BinaryTree (Tree_Node) : 
     def __init__(self,root=None): 
         self.root=root
-        
+
     def pre_order(self):     ## root-> left ->right
         pre_list= []
         if self.root is None : 
@@ -26,7 +26,7 @@ class BinaryTree (Tree_Node) :
                 traverse(root.right)
 
         traverse(self.root)
-        return  ( ", ".join( repr(e) for e in pre_list ) )
+        return  (pre_list )
 
 
     def in_order(self):   #Left, Root, Right
@@ -70,15 +70,15 @@ class BinaryTree (Tree_Node) :
 #-------------------------Breadth-first Traversal-- Code Challenge: Class 17 ----------------------        
 
 
-    def breadth_first(self): 
-        if self.root is None :
-            return
+    def breadth_first(tree): 
+
+        if tree.root is None :
+            return "empty"
 
         else :     
             result=[]
             queue = []    
-            queue+=[self.root]
-
+            queue+=[tree.root]            
             while queue : 
                 currentNode = queue[0]
                 if currentNode.left: 
