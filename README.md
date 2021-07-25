@@ -17,4 +17,4 @@
 | code Challenge 27 merge sort | [link](https://bit.ly/3wEg5ig)  |
 | code Challenge 28 quick sort | [link](https://bit.ly/2Tfmnal)  |
 | code Challenge 30 Hash tables | [link](https://bit.ly/3rglF9t)  |
-
+| code Challenge 31 hashmap-repeated-word | [link](https://bit.ly/3i0p6y6)  |
