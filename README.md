@@ -1,4 +1,4 @@
-# data-structures-and-algorithms
+# data-structures-and-algorithms                                                                                                            |
 
 |                                 Topic                                 |                                                       Link                                                       |
 | :-------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
@@ -13,6 +13,7 @@
 | code Challenge 13, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
 | code Challenge 14, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
 | code Challenge 16 , 17 Binary Tree and BST Implementation , max | [link](https://bit.ly/3gZfzqr)  |
+
 | code Challenge 26 insertion sort | [link](https://bit.ly/3hImlRO)  |
 | code Challenge 27 merge sort | [link](https://bit.ly/3wEg5ig)  |
 | code Challenge 28 quick sort | [link](https://bit.ly/2Tfmnal)  |
