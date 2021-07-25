@@ -78,7 +78,12 @@ class BinaryTree (Tree_Node) :
         else :     
             result=[]
             queue = []    
+
             queue+=[tree.root]            
+
+       
+
+
             while queue : 
                 currentNode = queue[0]
                 if currentNode.left: 
