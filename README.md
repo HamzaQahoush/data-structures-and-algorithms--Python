@@ -1,7 +1,7 @@
-# data-structures-and-algorithms                                                                                                            |
+# data-structures-and-algorithms                                                                                                           
 
 |                                 Topic                                 |                                                       Link                                                       |
-| :-------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------: |
+| :-------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
 |                   Code Challenge 01 - array-reverse                   | [Link](https://github.com/HamzaQahoush/data-structures-and-algorithms/blob/main/array-reverse/array-reverse.md)  |
 |                    code Challenge 02 - array-shift                    |   [link](https://github.com/HamzaQahoush/data-structures-and-algorithms/blob/main/array-shift/array-shift.md)    |
 |                   code Challenge 03 - Binary search                   | [link](https://github.com/HamzaQahoush/data-structures-and-algorithms/blob/main/BinarySearch/BinarySearch%20.md) |
@@ -13,7 +13,6 @@
 | code Challenge 13, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
 | code Challenge 14, Multi-bracket Validation.| [link](https://bit.ly/2UNhvtH)  |
 | code Challenge 16 , 17 Binary Tree and BST Implementation , max | [link](https://bit.ly/3gZfzqr)  |
-
 | code Challenge 26 insertion sort | [link](https://bit.ly/3hImlRO)  |
 | code Challenge 27 merge sort | [link](https://bit.ly/3wEg5ig)  |
 | code Challenge 28 quick sort | [link](https://bit.ly/2Tfmnal)  |
