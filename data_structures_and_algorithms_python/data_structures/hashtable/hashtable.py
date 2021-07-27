@@ -7,6 +7,14 @@ class Hashtable():
         self.size = size
         self.array = [None]*size
 
+    def display(self):
+        hashtable = Hashtable()
+        arr = []
+        for i, items in enumerate(hashtable.array):
+            if i and items:
+                arr.append(i)
+        return arr
+
     def hash(self, key):
         sumAsci = 0
         for char in key:
