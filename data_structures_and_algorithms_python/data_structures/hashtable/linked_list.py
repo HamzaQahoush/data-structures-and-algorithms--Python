@@ -3,6 +3,9 @@ class Node:
         self.value = value
         self.next = None
 
+    def __str__(self):
+        return self.value
+
 
 class Linked_List:
     def __init__(self):

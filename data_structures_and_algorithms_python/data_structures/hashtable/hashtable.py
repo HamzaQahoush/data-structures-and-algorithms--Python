@@ -7,14 +7,6 @@ class Hashtable():
         self.size = size
         self.array = [None]*size
 
-    def display(self):
-        hashtable = Hashtable()
-        arr = []
-        for i, items in enumerate(hashtable.array):
-            if i and items:
-                arr.append(i)
-        return arr
-
     def hash(self, key):
         sumAsci = 0
         for char in key:
@@ -22,11 +14,12 @@ class Hashtable():
         hashed_key = (sumAsci*17) % self.size
         return hashed_key
 
-    def add(self, key, value):
+    def add_(self, key, value):
         index = self.hash(key)
         if not self.array[index]:
             self.array[index] = Linked_List()
         self.array[index].ll_append([key, value])
+        return self.__str__()
 
     def get(self, key):
         try:
@@ -54,13 +47,24 @@ class Hashtable():
                 current = current.next
         return False
 
+    def __str__(self):
+        result = ""
+        for i in self.array:
+            if i is not None:
+                temp = i.head
+                while temp:
+                    result += "{%s}" % (temp.value,)
+                    temp = temp.next
+
+        return result
+
 
 if __name__ == "__main__":
     hashtable = Hashtable()
 
-    hashtable.add('ahmad', 25)
-    hashtable.add('silent', True)
-    hashtable.add('hamad', '26')
+    hashtable.add_('ahmad', 25)
+    hashtable.add_('silent', True)
+    hashtable.add_('hamad', '26')
     print(hashtable.get('hamad'))
     print(hashtable.contains('hamad'))
 
