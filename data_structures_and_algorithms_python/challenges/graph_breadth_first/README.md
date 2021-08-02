@@ -23,3 +23,5 @@ In a breadth first traversal, I starting at a specific vertex/node. This node mu
 The visual above shows the levels in which the nodes will be added to the queue. we can see that since the root node is A, it will look the nodes that are only 1 away from the root. This is C,E, & B.
 
 Next it will look at the nodes that are 2 away from the root, this is F, G, & D. It will follow this pattern until it reaches the end of the graph and all nodes have been visited.
+
+[code](graph_breadth_first.py)
