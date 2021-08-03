@@ -18,3 +18,6 @@ then I looped over it . then I check if the seconds hash table contain my key va
 <!-- Embedded whiteboard image -->
 
 <img src="CC33.jpg">
+
+
+[code](hashmap_left_join.py)
