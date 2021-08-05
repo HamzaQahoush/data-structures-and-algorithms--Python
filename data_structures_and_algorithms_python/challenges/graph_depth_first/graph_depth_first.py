@@ -28,6 +28,9 @@ class Graph():
             self._adjacency_list[new_v] = []
             return new_v
 
+    def get_neighbors(self, vertex):
+        return self._adjacency_list[vertex]
+
     def add_edge(self, start_vertex, end_vertex, weight=0):
         if start_vertex not in self._adjacency_list:
             raise KeyError('Start vertex is not found in the graph')
@@ -37,43 +40,21 @@ class Graph():
             self._adjacency_list[start_vertex].append(
                 (str(end_vertex), weight))
 
-    def breath_first_search(self, start_vertex):
-        list = []
-        queue = Queue()
-        visited = set()
+    def depth_first(self, start_vertex):
+        try:
+            visited = []
 
-        queue .enqueue(start_vertex)
-        visited.add(start_vertex)
+            def helper(vertex):
+                visited.append(vertex)
+                neighbors = self.get_neighbors(vertex)
+                for neighbor in neighbors:
+                    if neighbor[0] not in visited:
+                        helper(neighbor[0])
 
-        while queue:
-            current_vertex = queue.dequeue()
-            list.append(current_vertex)
-            for child in self._adjacency_list[current_vertex]:
-                if child[0] not in visited:
-                    child = child[0]
-                    visited.add(child)
-                    queue.enqueue(child)
-        return list
-
-    def depth_first(self):
-        nodes = self.get_nodes()
-        root = None
-        for node in nodes:
-            root = node
-            break
-        result = []
-
-        def inner_func(root, result):
-            if root not in result:
-                result.append(root)
-            neighbors = self.get_neighbors(root)
-            for edge in neighbors:
-                if edge.vertex not in result:
-                    result.append(edge.vertex)
-                    inner_func(edge.vertex, result)
-        if root:
-            inner_func(root, result)
-        return result
+            helper(start_vertex)
+            return visited
+        except TypeError:
+            return 'Start vertex is not found in the graph'
 
 
 if __name__ == "__main__":
@@ -84,11 +65,16 @@ if __name__ == "__main__":
     d = graph.add_node('D')
     e = graph.add_node('E')
     f = graph.add_node('F')
+    g = graph.add_node('G')
+    h = graph.add_node('H')
     graph.add_edge(a, b, 1)
-    graph.add_edge(a, c, 2)
-    graph.add_edge(b, d, 4)
-    graph.add_edge(c, d, 8)
-    graph.add_edge(c, e, 3)
-    graph.add_edge(d, f, 5)
+    graph.add_edge(b, c, 1)
+    graph.add_edge(c, g, 1)
+    graph.add_edge(a, d, 4)
+    graph.add_edge(d, e, 2)
+    graph.add_edge(d, b, 2)
+    graph.add_edge(d, f, 8)
+    graph.add_edge(d, h, 3)
+    graph.add_edge(d, e, 5)
 
-    print(graph.depth_first())
+    print(graph.depth_first(a))
